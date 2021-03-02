@@ -21,7 +21,7 @@ const TaskReducer=(state=initialState,{type,payload})=>{
         case DONE_TASK:
             return {...state,listTask:state.listTask.map(el=>el.id===payload?{...el,isDone:!el.isDone}:el)}
             case EDIT_TASK:
-                return {...state,listTask:state.listTask.map((el)=>el.id===payload.id?{...el,text:payload.nawTask}:el )}
+                return {...state,listTask:state.listTask.map((el)=>el.id===payload.id?{...el,text:payload.newTask}:el )}
         default:
             return state;
     }
